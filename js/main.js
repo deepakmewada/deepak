@@ -79,6 +79,12 @@ $(document).ready(function () {
   var tl = gsap.timeline({ repeat: -1 });
   tl.to("h1", 60, { backgroundPosition: "-960px 0" });
 
+  if ($(".skill-list").length) {
+    $(".skill-list li").one("inview", function () {
+        $(this).addClass("inview");
+    });
+  }
+
   $(".counter").each(function () {
     $(this).on("inview", function (event, isInView) {
       if (isInView) {
