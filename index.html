@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deepak Mewada | Web Developer</title>
+    <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -248,22 +249,22 @@
                                 <span class="letters">Get in touch</span>
                             </span>
                         </h2>
-                        <form>
+                        <form name="whatsappMessage">
                             <div class="row">
                                 <div class="col-sm-12 wow animate__fadeInUp" data-wow-duration="1s"
                                     data-wow-delay="0.2s">
-                                    <input type="text" class="form-control hide-mouse" placeholder="Name" />
+                                    <input type="text" name="name" class="form-control hide-mouse" placeholder="Name" />
                                 </div>
-                                <div class="col-sm-12 wow animate__fadeInUp" data-wow-duration="1s"
+                                <!-- <div class="col-sm-12 wow animate__fadeInUp" data-wow-duration="1s"
                                     data-wow-delay="0.4s">
                                     <input type="text" class="form-control hide-mouse" placeholder="Email" />
-                                </div>
+                                </div> -->
                                 <div class="col-sm-12 wow animate__fadeInUp" data-wow-duration="1s"
                                     data-wow-delay="0.8s">
-                                    <textarea class="form-control hide-mouse" rows="3" placeholder="Message"></textarea>
+                                    <textarea class="form-control hide-mouse" name="text" rows="3" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-sm-12 wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-                                    <button class="btn btn-primary btn-submit zoom-pointer">Save</button>
+                                    <button class="btn btn-outline-primary btn-submit zoom-pointer" type="submit">Send Message on Whatsapp</button>
                                 </div>
                                 <div class="col-sm-4 wow animate__fadeInUp" data-wow-duration="1s"
                                     data-wow-delay="1.2s">
@@ -330,16 +331,15 @@
     <script src="js/plugin.js"></script>
     <script src="js/main.js"></script>
     <script>
-        $('.project-link').on('click', function(){
-            $('.projects').addClass('show-up')
-        })
-        $('.project-close').on('click', function(){
-            $('.projects').removeClass('show-up')
-        })
-        $('.theme-toggle').on('click', function(){
-            $(this).toggleClass('darkActive');
-            $('body').toggleClass('dark')
-        })
+        function someMethodIThinkMightBeSlow() {
+    const startTime = performance.now();
+
+    // Do the normal stuff for this function
+
+    const duration = performance.now() - startTime;
+    console.log(`someMethodIThinkMightBeSlow took ${duration}ms`);
+}
+       
     </script>
 </body>
 
